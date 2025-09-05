@@ -80,4 +80,4 @@ async def history():
     cur.execute("SELECT question, answer, timestamp FROM qna ORDER BY id DESC LIMIT 50")
     rows = cur.fetchall()
     conn.close()
-    return [{"question": q, "answer": a, "timestamp": t} for q, a, t in rows
+    return [{"question": q, "answer": a, "timestamp": t} for q, a, t in rows]
